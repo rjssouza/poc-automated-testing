@@ -1,0 +1,20 @@
+{
+    "devDependencies": {
+        "@cucumber/cucumber": "^7.3.1",
+        "@cucumber/pretty-formatter": "^1.0.0-alpha.1",
+        "@playwright/test": "^1.22.2",
+        "expect-playwright": "^0.8.0",
+        "faker-br": "^0.4.1",
+        "playwright": "^1.22.2"
+    },
+    "main": "index.js",
+    "scripts": {
+        "tags": "node -r esm index.js --require cucumber.conf.js --require test/acceptance/step-definitions/**/*context.js --format @cucumber/pretty-formatter test/acceptance/scenarios/**/*.feature --tags",
+        "test": "node -r esm index.js --require cucumber.conf.js --require test/acceptance/step-definitions/**/*context.js --format @cucumber/pretty-formatter test/acceptance/scenarios/**/*.feature --publish"
+    },
+    "dependencies": {
+        "dotenv": "^10.0.0",
+        "esm": "^3.2.25",
+        "moment": "^2.29.3"
+    }
+}

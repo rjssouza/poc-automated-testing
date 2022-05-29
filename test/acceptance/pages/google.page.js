@@ -1,5 +1,4 @@
 import selector from "../selectors/google.selector";
-import { expect } from "@playwright/test";
 
 const navigate = async () => {
     const url = testing.env["GOOGLE_URL"];
@@ -8,17 +7,17 @@ const navigate = async () => {
 
 const fillSearchText = async (searchText) => {
     const searchInput = await page.locator(selector.SEARCH_INPUT);
-    await searchInput.fill(searchText);
+    await searchInput.type(searchText);
     await searchInput.press("Enter");  
 }
 
-const validateResult = async (expectedResult) => {
+const returnResult = async () => {
     const resultHeaders = await page.locator(selector.RESULT_HEADERS);
-    await expect(resultHeaders).toContainText([expectedResult]);  
+    return resultHeaders;
 }
 
 export default {
     navigate,
-    validateResult,
+    returnResult,
     fillSearchText
 };

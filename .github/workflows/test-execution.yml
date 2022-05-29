@@ -25,6 +25,8 @@ jobs:
         run: npx playwright install
       - name: Execute unit tests
         run: npm run test
+        env:
+          GOOGLE_URL: 'https://www.google.com.br/'
 
       # - name: Publish unit test results
       #   uses: EnricoMi/publish-unit-test-result-action@v1

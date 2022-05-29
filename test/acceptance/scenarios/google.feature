@@ -7,7 +7,7 @@ Feature: Google
 @google
 Scenario: Navigating google
     Given Access google
-    When Type "<search>"
+    When Type "<search>" and press enter
     Then Receive "<expectedResult>" on first page
 
 Examples:

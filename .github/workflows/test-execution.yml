@@ -1,0 +1,29 @@
+name: 'Test Execution'
+
+on:
+  pull_request:
+    branches: 
+      - develop
+  push:
+    branches:
+      - 'release/**'
+      - master
+
+jobs:
+  test-execution:
+    name: Test Execution
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout source code
+        uses: actions/checkout@v2
+      - name: Install dependencies
+        run: npm ci --ignore-scripts
+        env:
+          NPM_TOKEN: ${{ secrets.PAT }}
+      - name: Execute unit tests
+        run: npm run test_ci -- --ci
+      - name: Publish unit test results
+        uses: EnricoMi/publish-unit-test-result-action@v1
+        if: always()
+        with:
+          files: junit.xml

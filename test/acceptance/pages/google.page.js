@@ -2,6 +2,8 @@ import selector from "../selectors/google.selector";
 
 const navigate = async () => {
     const url = testing.env["GOOGLE_URL"];
+    page.once('load', () => console.log('Page loaded!'));
+
     await page.goto(url);  
 }
 

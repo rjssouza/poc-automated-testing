@@ -21,7 +21,7 @@ jobs:
         run: npm ci --ignore-scripts
         env:
           NPM_TOKEN: ${{ secrets.PAT }}
-      - name: Install playright
+      - name: Install playright browsers
         run: npx playwright install
       - name: Execute unit tests
         run: npm run test

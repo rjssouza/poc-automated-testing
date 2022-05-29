@@ -28,7 +28,7 @@ jobs:
         env:
           GOOGLE_URL: 'https://www.google.com.br/'
       - name: Generate report
-        run: run npm generate-report
+        run: npm run generate-report
       - name: Upload report
         uses: actions/upload-artifact@v2
         with:

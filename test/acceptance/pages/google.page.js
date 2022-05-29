@@ -5,9 +5,9 @@ const navigate = async () => {
     await page.goto(url);  
 }
 
-const fillSearchText = async (searchText) => {
+const fillSearchTextAndEnter = async (searchText) => {
     const searchInput = await page.locator(selector.SEARCH_INPUT);
-    await searchInput.type(searchText);
+    await searchInput.type(searchText); // pode ser usado o type também para simular melhor a interação com usuário
     await searchInput.press("Enter");  
 }
 
@@ -19,5 +19,5 @@ const returnResult = async () => {
 export default {
     navigate,
     returnResult,
-    fillSearchText
+    fillSearchTextAndEnter
 };

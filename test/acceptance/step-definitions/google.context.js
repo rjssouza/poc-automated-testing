@@ -7,7 +7,7 @@ Given("Access google", async () => {
 });
 
 When("Type {string} and press enter", async (searchText) => {
-  await page.fillSearchText(searchText);
+  await page.fillSearchTextAndEnter(searchText);
 });
 
 Then("Receive {string} on first page", async (expectedResult) => {

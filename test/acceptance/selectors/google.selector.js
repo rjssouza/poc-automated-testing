@@ -1,6 +1,5 @@
 const selector = {
-    SEARCH_INPUT:'input[aria-label="Pesquisar"]',
-    SEARCH_BUTTON:'input[aria-label="Google Search"]',
+    SEARCH_INPUT:'.gLFyf.gsfi',
     RESULT_HEADERS:'h3'
 };
 

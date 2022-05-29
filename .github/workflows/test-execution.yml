@@ -31,6 +31,7 @@ jobs:
   publish-result:
     name: Publish result
     runs-on: ubuntu-latest
+    steps:
       - name: Generate report
         run: npm run generate-report
       - name: Upload report

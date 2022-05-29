@@ -30,6 +30,7 @@ jobs:
 
   publish-result:
     name: Publish result
+    needs: [test-execution]
     runs-on: ubuntu-latest
     steps:
       - name: Generate report

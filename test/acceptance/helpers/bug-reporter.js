@@ -7,7 +7,7 @@ const SUCCESS = 'PASSED';
 const converter = new Convert();
 
 const reportBug = async (scenario) => {
-    console.log(converter.toHtml(scenario.result.message));
+    console.log(scenario.result.message);
 }
 
 const validateScenarioResult = async (scenario) => {

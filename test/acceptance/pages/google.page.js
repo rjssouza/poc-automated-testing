@@ -6,6 +6,8 @@ const navigate = async () => {
 }
 
 const fillSearchTextAndEnter = async (searchText) => {
+    const content = await page.textContent('html');
+    console.log(content);
     const searchInput = await page.locator(selector.SEARCH_INPUT);
     await searchInput.type(searchText); // pode ser usado o type também para simular melhor a interação com usuário
     await searchInput.press("Enter");  

@@ -8,6 +8,7 @@ on:
     branches:
       - 'release/**'
       - master
+  workflow_dispatch:
 
 jobs:
   test-execution:
@@ -20,7 +21,6 @@ jobs:
         run: npm ci --ignore-scripts
         env:
           NPM_TOKEN: ${{ secrets.PAT }}
-
       - name: Execute unit tests
         run: npm run test -- --ci
 

@@ -20,10 +20,12 @@ jobs:
         run: npm ci --ignore-scripts
         env:
           NPM_TOKEN: ${{ secrets.PAT }}
+
       - name: Execute unit tests
-        run: npm run test_ci -- --ci
-      - name: Publish unit test results
-        uses: EnricoMi/publish-unit-test-result-action@v1
-        if: always()
-        with:
-          files: junit.xml
+        run: npm run test -- --ci
+
+      # - name: Publish unit test results
+      #   uses: EnricoMi/publish-unit-test-result-action@v1
+      #   if: always()
+      #   with:
+      #     files: junit.xml

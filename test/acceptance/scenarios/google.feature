@@ -13,3 +13,4 @@ Scenario: Navigating google
 Examples:
     | search | expectedResult |
     | Red    | Red  |
+    | Red    | Blue  |

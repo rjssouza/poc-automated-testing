@@ -1,6 +1,7 @@
 
 import { Before, BeforeAll, AfterAll, After, setDefaultTimeout } from '@cucumber/cucumber';
 import { chromium } from 'playwright';
+import validateScenarioResult from './test/acceptance/helpers/bug-reporter'
 
 setDefaultTimeout(90000)
 
@@ -24,7 +25,8 @@ Before(async function () {
 });
 
 // Cleanup after each scenario
-After(async function () {
+After(async function (scenario) {
+    await validateScenarioResult(scenario);
     await global.page.close();
     await global.context.close();
 });

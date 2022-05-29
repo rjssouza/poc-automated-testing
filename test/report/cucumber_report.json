@@ -14,7 +14,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 45000000
+              "duration": 37000000
             }
           },
           {
@@ -27,7 +27,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1867000000
+              "duration": 1676000000
             }
           },
           {
@@ -40,7 +40,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 2124000000
+              "duration": 2144000000
             }
           },
           {
@@ -53,7 +53,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1057000000
+              "duration": 1106000000
             }
           },
           {
@@ -62,6 +62,79 @@
             "result": {
               "status": "passed",
               "duration": 12000000
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@google",
+            "line": 7
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "google;navigating-google",
+        "keyword": "Scenario",
+        "line": 8,
+        "name": "Navigating google",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 33000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 9,
+            "name": "Access google",
+            "match": {
+              "location": "test/acceptance/step-definitions/google.context.js:5"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1595000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 10,
+            "name": "Type \"Red\" and press enter",
+            "match": {
+              "location": "test/acceptance/step-definitions/google.context.js:9"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2154000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 11,
+            "name": "Receive \"Blue\" on first page",
+            "match": {
+              "location": "test/acceptance/step-definitions/google.context.js:13"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 5021000000,
+              "error_message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\n\u001b[32m- Expected  -  1\u001b[39m\n\u001b[31m+ Received  + 11\u001b[39m\n\n\u001b[2m  Array [\u001b[22m\n\u001b[32m-   \"Blue\",\u001b[39m\n\u001b[31m+   \"(RED)\",\u001b[39m\n\u001b[31m+   \"Imagens de Red\",\u001b[39m\n\u001b[31m+   \"Filtros de pesquisa guiada\",\u001b[39m\n\u001b[31m+   \"Vídeos\",\u001b[39m\n\u001b[31m+   \"Principais notícias\",\u001b[39m\n\u001b[31m+   \"Assistir a Red - Crescer é uma Fera | Filme completo | Disney+\",\u001b[39m\n\u001b[31m+   \"(PRODUCT)RED - Apple (BR)\",\u001b[39m\n\u001b[31m+   \"RED Digital Cinema | 8K & 5K Professional Cameras\",\u001b[39m\n\u001b[31m+   \"Red - Taylor Swift - VAGALUME\",\u001b[39m\n\u001b[31m+   \"RED (filme) – Wikipédia, a enciclopédia livre\",\u001b[39m\n\u001b[31m+   \"Pesquisas relacionadas\",\u001b[39m\n\u001b[2m  ]\u001b[22m\nCall log:\n  \u001b[2m- expect.toContainText with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for selector \"h3\"\u001b[22m\n\u001b[2m  -   selector resolved to 0 elements\u001b[22m\n\u001b[2m  -   selector resolved to 11 elements\u001b[22m\n\n    at Proxy.<anonymous> (/home/robsonjs/Repository/Personal/poc-unit-testing/node_modules/@playwright/test/lib/expect.js:164:37)\n    at World.<anonymous> (/home/robsonjs/Repository/Personal/poc-unit-testing/test/acceptance/step-definitions/google.context.js:15:24)\n    at runNextTicks (node:internal/process/task_queues:61:5)\n    at processImmediate (node:internal/timers:437:9)"
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "failed",
+              "duration": 3670000000,
+              "error_message": "page.screenshot: Target closed\n=========================== logs ===========================\ntaking page screenshot\n============================================================\n    at reportBug (/home/robsonjs/Repository/Personal/poc-unit-testing/test/acceptance/helpers/bug-reporter.js:11:16)\n    at validateScenarioResult (/home/robsonjs/Repository/Personal/poc-unit-testing/test/acceptance/helpers/bug-reporter.js:18:13)\n    at World.<anonymous> (/home/robsonjs/Repository/Personal/poc-unit-testing/cucumber.conf.js:29:11)"
             }
           }
         ],

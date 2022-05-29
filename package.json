@@ -14,9 +14,11 @@
         "generate-report": "node -r esm report.js"
     },
     "dependencies": {
+        "ansi-to-html": "^0.7.2",
         "cucumber-html-reporter": "^5.5.0",
         "dotenv": "^10.0.0",
         "esm": "^3.2.25",
-        "moment": "^2.29.3"
+        "moment": "^2.29.3",
+        "utf8": "^3.0.0"
     }
 }

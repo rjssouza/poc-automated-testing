@@ -10,7 +10,7 @@
     "main": "index.js",
     "scripts": {
         "tags": "node -r esm index.js --require cucumber.conf.js --require test/acceptance/step-definitions/**/*context.js --format @cucumber/pretty-formatter test/acceptance/scenarios/**/*.feature --tags",
-        "test": "node -r esm index.js --require cucumber.conf.js --require test/acceptance/step-definitions/**/*context.js --format @cucumber/pretty-formatter test/acceptance/scenarios/**/*.feature -f summary -f json:report/cucumber_report.json",
+        "test": "node -r esm index.js --require cucumber.conf.js --require test/acceptance/step-definitions/**/*context.js --format @cucumber/pretty-formatter test/acceptance/scenarios/**/*.feature -f summary -f json:test/report/cucumber_report.json",
         "generate-report": "node -r esm report.js"
     },
     "dependencies": {

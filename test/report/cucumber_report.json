@@ -1,0 +1,84 @@
+[
+  {
+    "description": "    As google user\n    I want to search for an item\n    To receive the result",
+    "elements": [
+      {
+        "description": "",
+        "id": "google;navigating-google",
+        "keyword": "Scenario",
+        "line": 8,
+        "name": "Navigating google",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 45000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 9,
+            "name": "Access google",
+            "match": {
+              "location": "test/acceptance/step-definitions/google.context.js:5"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1867000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 10,
+            "name": "Type \"Red\" and press enter",
+            "match": {
+              "location": "test/acceptance/step-definitions/google.context.js:9"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2124000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 11,
+            "name": "Receive \"Red\" on first page",
+            "match": {
+              "location": "test/acceptance/step-definitions/google.context.js:13"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1057000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 12000000
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@google",
+            "line": 7
+          }
+        ],
+        "type": "scenario"
+      }
+    ],
+    "id": "google",
+    "line": 2,
+    "keyword": "Feature",
+    "name": "Google",
+    "tags": [],
+    "uri": "test/acceptance/scenarios/google.feature"
+  }
+]

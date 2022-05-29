@@ -27,6 +27,9 @@ jobs:
         run: npm run test
         env:
           GOOGLE_URL: 'https://www.google.com.br/'
+  publish-result:
+    name: Publish result
+    runs-on: ubuntu-latest
       - name: Generate report
         run: npm run generate-report
       - name: Upload report

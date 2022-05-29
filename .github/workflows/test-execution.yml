@@ -25,6 +25,7 @@ jobs:
         run: npx playwright install
       - name: Execute unit tests
         run: npm run test
+        continue-on-error: true
         env:
           GOOGLE_URL: 'https://www.google.com.br/'
       - name: Generate report

@@ -33,6 +33,8 @@ jobs:
     needs: [test-execution]
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout source code
+        uses: actions/checkout@v2
       - name: Generate report
         run: npm run generate-report
       - name: Upload report

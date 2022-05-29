@@ -4,9 +4,7 @@ jspm_packages
 coverage
 junit.xml
 .vscode
-report/*.html
-report/*.json
-screenshots
+report
 
 # Serverless directories
 .serverless

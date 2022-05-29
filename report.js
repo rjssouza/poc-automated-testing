@@ -3,7 +3,7 @@ import { generate } from 'cucumber-html-reporter';
 const options = {
         theme: 'bootstrap',
         jsonFile: 'test/report/cucumber_report.json',
-        output: 'test/report/cucumber_report.html',
+        output: 'test/report/report.html',
         reportSuiteAsScenarios: true,
         launchReport: true,
         metadata: {

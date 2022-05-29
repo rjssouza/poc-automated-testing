@@ -12,7 +12,7 @@ on:
 
 jobs:
   test-execution:
-    name: Test Execution
+    name: Automated Test Execution
     runs-on: ubuntu-latest
     steps:
       - name: Checkout source code
